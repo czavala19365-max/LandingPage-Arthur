@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SiteBackground } from "@/components/SiteBackground";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,7 +19,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <SiteBackground />
+        <div className="site-shell">{children}</div>
+      </body>
     </html>
   );
 }

@@ -55,7 +55,7 @@ export default function LandingPage() {
               <p className="hero__eyebrow">OPERACIONES LEGALES · AUTOMATIZADAS</p>
               <h1 className="hero__title">La infraestructura para el trabajo legal moderno.</h1>
               <p className="hero__sub">
-                Arthur automatiza el seguimiento judicial, el monitoreo registral y la generación documental para los equipos legales más exigentes del Perú. {TAGLINE}.
+                Arthur automatiza el seguimiento judicial, monitoreo registral y generación de documentos. Recibe alertas y realiza consultas legales especializadas.
               </p>
               <div className="hero__ctas">
                 <Link href="#demo" className="btn btn--primary">Solicitar demo</Link>
@@ -77,8 +77,8 @@ export default function LandingPage() {
           </div>
           <div className="marquee" aria-hidden="true">
             <div className="marquee__track">
-              {["Estudio Vargas & Asociados", "Grupo Pacífico", "Banco Continental", "Miranda Abogados", "Fondo Andino Capital", "Corporación Minera del Sur",
-                "Estudio Vargas & Asociados", "Grupo Pacífico", "Banco Continental", "Miranda Abogados", "Fondo Andino Capital", "Corporación Minera del Sur"].map((name, i) => (
+              {["Estudio Vargas & Asociados", "Grupo Pacífico", "Trujillo & Amorós Abogados", "Grupo Acres Finance", "Ganoza & Servigón", "Corporación Minera del Sur",
+                "Estudio Vargas & Asociados", "Grupo Pacífico", "Trujillo & Amorós Abogados", "Grupo Acres Finance", "Ganoza & Servigón", "Corporación Minera del Sur"].map((name, i) => (
                 <span key={i} className="marquee__logo">{name}</span>
               ))}
             </div>
@@ -89,7 +89,7 @@ export default function LandingPage() {
         <section className="problem">
           <div className="problem__inner">
             <p className="problem__eyebrow">EL ESTADO ACTUAL</p>
-            <h2 className="problem__title">El trabajo legal en LATAM sigue dependiendo de procesos manuales.</h2>
+            <h2 className="problem__title">El trabajo legal sigue dependiendo de procesos manuales y repetitivos.</h2>
             <div className="problem__rule" aria-hidden="true"></div>
             <div className="problem__stats">
               <div className="problem__stat">
@@ -101,8 +101,12 @@ export default function LandingPage() {
                 <p>abogados ha perdido un plazo procesal.</p>
               </div>
               <div className="problem__stat">
-                <span className="problem__number">40%</span>
-                <p>del tiempo legal se va en tareas administrativas.</p>
+                <span className="problem__number">55%</span>
+                <p>del tiempo se va en tareas administrativas.</p>
+              </div>
+              <div className="problem__stat">
+                <span className="problem__number">~S/ 150K</span>
+                <p>anuales en ingresos no captados por no dedicar tiempo a buscar clientes.</p>
               </div>
             </div>
           </div>
@@ -120,7 +124,7 @@ export default function LandingPage() {
                 <span className="platform__num">01</span>
                 <div className="platform__copy">
                   <h3 className="platform__heading">Monitoreo Judicial</h3>
-                  <p className="platform__desc">Seguimiento automático de expedientes en el CEJ del Poder Judicial, con la frecuencia que tú definas.</p>
+                  <p className="platform__desc">Seguimiento automático de expedientes en el CEJ, con la frecuencia que tú definas, alertas programadas mediante correo y WhatsApp.</p>
                 </div>
                 <div className="platform__thumb" aria-hidden="true">
                   <div className="platform__thumb-inner platform__thumb-inner--judicial">
@@ -134,7 +138,7 @@ export default function LandingPage() {
                 <span className="platform__num">02</span>
                 <div className="platform__copy">
                   <h3 className="platform__heading">Publicidad Registral</h3>
-                  <p className="platform__desc">Vigencias de poder, partidas y documentos SUNARP solicitados de forma programada y automática.</p>
+                  <p className="platform__desc">Vigencias de poder, partidas, seguimiento de títulos y documentos SUNARP solicitados de forma programada y automática.</p>
                 </div>
                 <div className="platform__thumb" aria-hidden="true">
                   <div className="platform__thumb-inner platform__thumb-inner--sunarp">
@@ -206,11 +210,11 @@ export default function LandingPage() {
               <p className="eyebrow">Publicidad registral</p>
               <h2 className="display">Vigencias y partidas SUNARP, sin abrir un navegador.</h2>
               <p className="body">
-                Programa solicitudes de vigencia de poder ante SUNARP, monitorea partidas registrales y detecta cambios en registros societarios. Arthur gestiona el ciclo completo y archiva cada documento vinculado al expediente correspondiente.
+                Programa solicitudes de vigencia de poder ante SUNARP, monitorea partidas registrales, seguimiento de títulos y detecta cambios en registros societarios. Arthur gestiona el ciclo completo y archiva cada documento vinculado al expediente correspondiente.
               </p>
               <ul className="bullet-list">
                 <li>Solicitud automática y programada de vigencias</li>
-                <li>Monitoreo continuo de cambios societarios</li>
+                <li>Seguimiento de títulos y cambios societarios</li>
                 <li>Historial completo y consultable por expediente</li>
               </ul>
             </div>
@@ -240,6 +244,10 @@ export default function LandingPage() {
                 <div className="wa-section__card">
                   <span className="wa-section__card-num">03</span>
                   <p>Recibe alertas críticas al instante.</p>
+                </div>
+                <div className="wa-section__card">
+                  <span className="wa-section__card-num">04</span>
+                  <p>Redacta documentos legales mediante mensajes por WhatsApp.</p>
                 </div>
               </div>
             </div>
@@ -301,29 +309,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Use cases */}
-        <section className="use-cases section section--white">
-          <div className="container">
-            <p className="eyebrow">Industrias</p>
-            <h2 className="display">Diseñado para los equipos legales más exigentes.</h2>
-            <div className="use-cases__scroll">
-              {[
-                ["Estudios de abogados", "Litigio y asesoría con cientos de expedientes activos en múltiples instancias."],
-                ["Equipos legales corporativos", "Operaciones in-house con demanda de cumplimiento, contratos y registros societarios."],
-                ["Bancos y entidades financieras", "Cartera judicial, garantías y monitoreo registral a escala institucional."],
-                ["Fondos de inversión", "Due diligence continua y seguimiento de participadas y vehículos de inversión."],
-                ["Inmobiliarias y desarrolladoras", "Expedientes de propiedad, saneamiento registral y contratos de proyecto."],
-                ["Secretarías corporativas", "Actas, poderes y vigencias gestionados con trazabilidad completa."],
-              ].map(([title, desc]) => (
-                <article key={title} className="use-cases__card">
-                  <h3>{title}</h3>
-                  <p>{desc}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Testimonial */}
         <section className="testimonial section section--offwhite">
           <div className="container testimonial__inner">
@@ -368,7 +353,7 @@ export default function LandingPage() {
           <div className="final-cta__inner">
             <p className="final-cta__eyebrow">EMPIEZA HOY</p>
             <h2 className="final-cta__title">Transforma cómo <em className="final-cta__accent">opera</em><br />tu equipo legal.</h2>
-            <p className="final-cta__body">Hablamos contigo en 24 horas para entender tu operación y mostrarte una demo personalizada.</p>
+            <p className="final-cta__body">Céntrate en lo que verdaderamente importa. Hablamos contigo en 24 horas para entender tu operación y mostrarte una demo personalizada.</p>
             <div className="final-cta__actions">
               <Link href="#demo" className="btn btn--primary">Solicitar demo</Link>
               <Link href="#demo" className="btn btn--ghost">Hablar con un especialista</Link>
@@ -392,12 +377,6 @@ export default function LandingPage() {
               <Link href="#plataforma">Publicidad registral</Link>
               <Link href="#plataforma">Automatización documental</Link>
               <Link href="#plataforma">WhatsApp</Link>
-            </div>
-            <div className="footer__col">
-              <h4>Soluciones</h4>
-              <Link href="#monitoreo-judicial">Estudios de abogados</Link>
-              <Link href="#monitoreo-judicial">Equipos in-house</Link>
-              <Link href="#monitoreo-judicial">Sector financiero</Link>
             </div>
             <div className="footer__col">
               <h4>Empresa</h4>
