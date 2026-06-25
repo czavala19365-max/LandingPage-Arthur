@@ -20,7 +20,7 @@ export function BrandMark({ variant = "light", className }: BrandMarkProps) {
     return (
       <Image
         src={`/brand/${file}`}
-        alt="Arthur"
+        alt="arthur"
         width={120}
         height={32}
         className={`brand-mark ${className ?? ""}`}
@@ -30,8 +30,12 @@ export function BrandMark({ variant = "light", className }: BrandMarkProps) {
   }
 
   return (
-    <span className={`brand-mark-fallback ${className ?? ""}`} aria-label="Arthur">
-      arthur
+    <span
+      className={`brand-mark-fallback brand-mark-fallback--${variant} ${className ?? ""}`}
+      aria-label="arthur"
+    >
+      <span className="brand-mark-fallback__word">arthur</span>
+      <span className="brand-mark-fallback__line" aria-hidden="true" />
     </span>
   );
 }

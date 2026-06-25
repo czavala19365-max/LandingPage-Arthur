@@ -5,8 +5,8 @@ Sube estos archivos para activar los assets reales. Mientras no existan, la land
 ## Brand
 
 ```
-public/brand/logo.svg              (SVG, altura ~32px, navbar / fondos claros)
-public/brand/logo-dark.svg         (SVG, altura ~32px, footer / secciones oscuras)
+public/brand/logo.svg              (wordmark italic sans, blanco + línea gold — fondos oscuros)
+public/brand/logo-dark.svg         (wordmark navy ink — fondos claros; min. 108px ancho)
 ```
 
 ## Videos (5 escenas)

@@ -35,7 +35,14 @@ public/landing/screenshots/
 | `PlatformVideo` | Video con fallback placeholder y screenshot en `prefers-reduced-motion` |
 | `BrowserFrame` | Marco navegador para demos desktop |
 | `PhoneFrame` | Marco iPhone para WhatsApp |
-| `BrandMark` | Logo SVG o fallback serif `arthur` |
+| `BrandMark` | Logo SVG o fallback italic `arthur` + línea gold |
+
+## Brand book
+
+- **Navy Ink** `#2D3748` — textos, fondos oscuros
+- **Pastel Denim** `#CBD5E0` — bordes, superficies secundarias
+- **Warm Gold** `#C2A46D` — CTAs, acentos, eyebrows
+- **Lora** — titulares serif · **Inter** — cuerpo y UI
 
 ## Build
 
