@@ -96,7 +96,7 @@ export default function LandingPage() {
       <main>
         {/* Hero */}
         <section className="hero">
-          <div className="container hero__grid">
+          <div className="container">
             <div className="hero__content">
               <p className="hero__eyebrow">OPERACIONES LEGALES · AUTOMATIZADAS</p>
               <h1 className="hero__title">La infraestructura para el trabajo legal moderno.</h1>
@@ -107,9 +107,6 @@ export default function LandingPage() {
                 <Link href="#demo" className="btn btn--primary">Solicitar demo</Link>
                 <Link href="#plataforma" className="hero__link">Ver la plataforma →</Link>
               </div>
-            </div>
-            <div className="hero__visual">
-              <PlatformVideo scene="dashboard" eager />
             </div>
           </div>
         </section>
@@ -178,10 +175,7 @@ export default function LandingPage() {
 
         {/* Monitoreo Judicial */}
         <section className="deep-dive section section--offwhite" id="monitoreo-judicial">
-          <div className="container deep-dive__grid">
-            <div className="deep-dive__visual">
-              <PlatformVideo scene="alerta-judicial" />
-            </div>
+          <div className="container">
             <div className="deep-dive__content">
               <p className="eyebrow">Monitoreo judicial</p>
               <h2 className="display">Nunca vuelvas a perder una notificación judicial.</h2>
@@ -198,8 +192,8 @@ export default function LandingPage() {
         </section>
 
         {/* Publicidad Registral */}
-        <section className="deep-dive section section--white deep-dive--reversed" id="publicidad-registral">
-          <div className="container deep-dive__grid">
+        <section className="deep-dive section section--white" id="publicidad-registral">
+          <div className="container">
             <div className="deep-dive__content">
               <p className="eyebrow">Publicidad registral</p>
               <h2 className="display">Vigencias y partidas SUNARP, sin abrir un navegador.</h2>
@@ -212,15 +206,12 @@ export default function LandingPage() {
                 <li>Historial completo y consultable por expediente</li>
               </ul>
             </div>
-            <div className="deep-dive__visual">
-              <PlatformVideo scene="vigencia-sprl" />
-            </div>
           </div>
         </section>
 
         {/* WhatsApp */}
         <section className="wa-section" id="inteligencia-conversacional">
-          <div className="wa-section__inner">
+          <div className="container">
             <div className="wa-section__copy">
               <h2 className="wa-section__title">Tu equipo legal, en el bolsillo.</h2>
               <p className="wa-section__sub">Arthur vive donde tú ya trabajas. Pregunta, solicita y recibe — todo por WhatsApp.</p>
@@ -243,15 +234,12 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
-            <div className="wa-section__phone">
-              <PlatformVideo scene="whatsapp-chat" />
-            </div>
           </div>
         </section>
 
         {/* Document Automation */}
         <section className="deep-dive section section--white" id="automatizacion-documental">
-          <div className="container deep-dive__grid">
+          <div className="container">
             <div className="deep-dive__content">
               <p className="eyebrow">Automatización documental</p>
               <h2 className="display">De horas de redacción a minutos.</h2>
@@ -263,9 +251,6 @@ export default function LandingPage() {
                 <li>Contratos y poderes con datos precargados</li>
                 <li>Plantillas adaptables a tu estilo corporativo</li>
               </ul>
-            </div>
-            <div className="deep-dive__visual">
-              <PlatformVideo scene="generador-actas" />
             </div>
           </div>
         </section>
