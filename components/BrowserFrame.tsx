@@ -6,6 +6,7 @@ interface BrowserFrameProps {
 }
 
 export function BrowserFrame({ children, className }: BrowserFrameProps) {
+  if (!children) return null;
   return (
     <div className={`browser-frame ${className ?? ""}`}>
       <div className="browser-frame__chrome">

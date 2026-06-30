@@ -1,11 +1,57 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
-import { BrowserFrame } from "@/components/BrowserFrame";
 import { NavClient } from "@/components/NavClient";
-import { PhoneFrame } from "@/components/PhoneFrame";
+import { PlatformFlipCard } from "@/components/PlatformFlipCard";
 import { PlatformVideo } from "@/components/PlatformVideo";
 
-const TAGLINE = "Seguimiento inteligente de trámites registrales y procesos judiciales";
+const TAGLINE = "Céntrate en lo que verdaderamente importa";
+
+const TRUST_CLIENTS = [
+  "Acres Finance",
+  "Servigón Abogados",
+  "Estudio Vargas García",
+  "Ocola & Valdez Abogados",
+  "Trujillo & Amorós Abogados",
+  "Casa Varela",
+];
+
+const CAPABILITIES = [
+  {
+    num: "01",
+    title: "Monitoreo Judicial",
+    description:
+      "Seguimiento automático de expedientes en el CEJ, con la frecuencia que tú definas, alertas programadas mediante correo y WhatsApp.",
+    href: "#monitoreo-judicial",
+  },
+  {
+    num: "02",
+    title: "Publicidad Registral",
+    description:
+      "Vigencias de poder, partidas, seguimiento de títulos y documentos SUNARP solicitados de forma programada y automática.",
+    href: "#publicidad-registral",
+  },
+  {
+    num: "03",
+    title: "Automatización Documental",
+    description: "Genera actas societarias, contratos y certificados con IA en minutos, no en horas.",
+    href: "#automatizacion-documental",
+  },
+  {
+    num: "04",
+    title: "Inteligencia Conversacional",
+    description: "Consulta, solicita y recibe — todo desde WhatsApp, integrado a tu operación legal.",
+    href: "#inteligencia-conversacional",
+  },
+] as const;
+
+function GlobeIcon() {
+  return (
+    <svg className="security__globe" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M3 12h18M12 3c2.5 2.8 2.5 16.2 0 18M12 3c-2.5 2.8-2.5 16.2 0 18" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  );
+}
 
 export default function LandingPage() {
   return (
@@ -22,7 +68,7 @@ export default function LandingPage() {
             <Link href="#monitoreo-judicial">Soluciones</Link>
             <Link href="#seguridad">Seguridad</Link>
             <Link href="#clientes">Clientes</Link>
-            <Link href="#recursos">Recursos</Link>
+            <Link href="#demo">Recursos</Link>
           </nav>
           <div className="nav__actions">
             <a href="https://arthur-siguelo.vercel.app" className="nav__login" target="_blank" rel="noopener noreferrer">
@@ -63,9 +109,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="hero__visual">
-              <BrowserFrame>
-                <PlatformVideo scene="dashboard" eager />
-              </BrowserFrame>
+              <PlatformVideo scene="dashboard" eager />
             </div>
           </div>
         </section>
@@ -77,8 +121,7 @@ export default function LandingPage() {
           </div>
           <div className="marquee" aria-hidden="true">
             <div className="marquee__track">
-              {["Estudio Vargas & Asociados", "Grupo Pacífico", "Trujillo & Amorós Abogados", "Grupo Acres Finance", "Ganoza & Servigón", "Corporación Minera del Sur",
-                "Estudio Vargas & Asociados", "Grupo Pacífico", "Trujillo & Amorós Abogados", "Grupo Acres Finance", "Ganoza & Servigón", "Corporación Minera del Sur"].map((name, i) => (
+              {[...TRUST_CLIENTS, ...TRUST_CLIENTS].map((name, i) => (
                 <span key={i} className="marquee__logo">{name}</span>
               ))}
             </div>
@@ -120,62 +163,15 @@ export default function LandingPage() {
               <h2 className="platform__title">Una plataforma. Cuatro capacidades.</h2>
             </header>
             <div className="platform__grid">
-              <Link href="#monitoreo-judicial" className="platform__cell">
-                <span className="platform__num">01</span>
-                <div className="platform__copy">
-                  <h3 className="platform__heading">Monitoreo Judicial</h3>
-                  <p className="platform__desc">Seguimiento automático de expedientes en el CEJ, con la frecuencia que tú definas, alertas programadas mediante correo y WhatsApp.</p>
-                </div>
-                <div className="platform__thumb" aria-hidden="true">
-                  <div className="platform__thumb-inner platform__thumb-inner--judicial">
-                    <div className="pt-row pt-row--head"><span>Expediente</span><span>Estado</span></div>
-                    <div className="pt-row pt-row--active"><span>00847-2023</span><span className="pt-tag">Nueva</span></div>
-                    <div className="pt-row"><span>01234-2022</span><span>Sin cambios</span></div>
-                  </div>
-                </div>
-              </Link>
-              <Link href="#publicidad-registral" className="platform__cell">
-                <span className="platform__num">02</span>
-                <div className="platform__copy">
-                  <h3 className="platform__heading">Publicidad Registral</h3>
-                  <p className="platform__desc">Vigencias de poder, partidas, seguimiento de títulos y documentos SUNARP solicitados de forma programada y automática.</p>
-                </div>
-                <div className="platform__thumb" aria-hidden="true">
-                  <div className="platform__thumb-inner platform__thumb-inner--sunarp">
-                    <div className="pt-bar">SUNARP · Vigencias</div>
-                    <div className="pt-row"><span>Inversiones Norte SAC</span><span className="pt-tag">Vigente</span></div>
-                    <div className="pt-row"><span>Minera Andina SA</span><span>12/2026</span></div>
-                  </div>
-                </div>
-              </Link>
-              <Link href="#automatizacion-documental" className="platform__cell">
-                <span className="platform__num">03</span>
-                <div className="platform__copy">
-                  <h3 className="platform__heading">Automatización Documental</h3>
-                  <p className="platform__desc">Genera actas societarias, contratos y certificados con IA en minutos, no en horas.</p>
-                </div>
-                <div className="platform__thumb" aria-hidden="true">
-                  <div className="platform__thumb-inner platform__thumb-inner--docs">
-                    <div className="pt-doc-title">Acta de Junta General</div>
-                    <div className="pt-line"></div>
-                    <div className="pt-line"></div>
-                    <div className="pt-line pt-line--short"></div>
-                  </div>
-                </div>
-              </Link>
-              <Link href="#inteligencia-conversacional" className="platform__cell">
-                <span className="platform__num">04</span>
-                <div className="platform__copy">
-                  <h3 className="platform__heading">Inteligencia Conversacional</h3>
-                  <p className="platform__desc">Consulta, solicita y recibe — todo desde WhatsApp, integrado a tu operación legal.</p>
-                </div>
-                <div className="platform__thumb" aria-hidden="true">
-                  <div className="platform__thumb-inner platform__thumb-inner--chat">
-                    <div className="pt-bubble pt-bubble--out">¿Estado del 00847-2023?</div>
-                    <div className="pt-bubble pt-bubble--in">Traslado 5 días. Plazo: 28 mar.</div>
-                  </div>
-                </div>
-              </Link>
+              {CAPABILITIES.map((cap) => (
+                <PlatformFlipCard
+                  key={cap.num}
+                  num={cap.num}
+                  title={cap.title}
+                  description={cap.description}
+                  href={cap.href}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -184,9 +180,7 @@ export default function LandingPage() {
         <section className="deep-dive section section--offwhite" id="monitoreo-judicial">
           <div className="container deep-dive__grid">
             <div className="deep-dive__visual">
-              <BrowserFrame>
-                <PlatformVideo scene="alerta-judicial" />
-              </BrowserFrame>
+              <PlatformVideo scene="alerta-judicial" />
             </div>
             <div className="deep-dive__content">
               <p className="eyebrow">Monitoreo judicial</p>
@@ -219,9 +213,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <div className="deep-dive__visual">
-              <BrowserFrame>
-                <PlatformVideo scene="vigencia-sprl" />
-              </BrowserFrame>
+              <PlatformVideo scene="vigencia-sprl" />
             </div>
           </div>
         </section>
@@ -252,9 +244,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="wa-section__phone">
-              <PhoneFrame>
-                <PlatformVideo scene="whatsapp-chat" />
-              </PhoneFrame>
+              <PlatformVideo scene="whatsapp-chat" />
             </div>
           </div>
         </section>
@@ -275,36 +265,7 @@ export default function LandingPage() {
               </ul>
             </div>
             <div className="deep-dive__visual">
-              <BrowserFrame>
-                <PlatformVideo scene="generador-actas" />
-              </BrowserFrame>
-            </div>
-          </div>
-        </section>
-
-        {/* How it works */}
-        <section className="how-it-works section section--offwhite" id="recursos">
-          <div className="container">
-            <p className="eyebrow">Proceso</p>
-            <h2 className="display">Cómo funciona Arthur.</h2>
-            <div className="timeline">
-              <div className="timeline__step">
-                <span className="timeline__number">01</span>
-                <h3 className="display display--sm">Configuras tus expedientes y entidades.</h3>
-                <p className="body-sm">Importa casos del CEJ del Poder Judicial, registra sociedades en SUNARP y define tu equipo.</p>
-              </div>
-              <div className="timeline__connector" aria-hidden="true"></div>
-              <div className="timeline__step">
-                <span className="timeline__number">02</span>
-                <h3 className="display display--sm">Arthur monitorea, analiza y organiza automáticamente.</h3>
-                <p className="body-sm">Barridos programados, clasificación de urgencia y archivo documental continuo.</p>
-              </div>
-              <div className="timeline__connector" aria-hidden="true"></div>
-              <div className="timeline__step">
-                <span className="timeline__number">03</span>
-                <h3 className="display display--sm">Tú decides cómo y cuándo recibir alertas y documentos.</h3>
-                <p className="body-sm">WhatsApp, email o dashboard — según la criticidad de cada evento.</p>
-              </div>
+              <PlatformVideo scene="generador-actas" />
             </div>
           </div>
         </section>
@@ -328,11 +289,19 @@ export default function LandingPage() {
             <div className="security__content">
               <p className="eyebrow">Seguridad</p>
               <h2 className="display">Seguridad y control de nivel empresarial.</h2>
-              <p className="body">Cifrado en reposo y en tránsito, control de acceso basado en roles, registros de auditoría completos. Cumplimiento alineado con GDPR y la Ley N° 29733 de protección de datos personales del Perú.</p>
+              <p className="body">Cifrado en reposo y en tránsito, control de acceso basado en roles, registros de auditoría completos. Cumplimiento alineado con GDPR, PIPEDA (Canadá) y la Ley N° 29733 de protección de datos personales del Perú.</p>
             </div>
             <div className="security__badges">
               <div className="security__badge">SOC 2<br /><span>en proceso</span></div>
               <div className="security__badge">Ley 29733<br /><span>Perú</span></div>
+              <div className="security__badge security__badge--intl">
+                <GlobeIcon />
+                GDPR<br /><span>Unión Europea</span>
+              </div>
+              <div className="security__badge security__badge--intl">
+                <GlobeIcon />
+                PIPEDA<br /><span>Canadá</span>
+              </div>
               <div className="security__badge">ISO 27001<br /><span>en proceso</span></div>
             </div>
           </div>

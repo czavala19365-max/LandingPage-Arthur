@@ -6,6 +6,7 @@ interface PhoneFrameProps {
 }
 
 export function PhoneFrame({ children, className }: PhoneFrameProps) {
+  if (!children) return null;
   return (
     <div className={`phone-frame ${className ?? ""}`}>
       <div className="phone-frame__bezel">

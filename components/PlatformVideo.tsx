@@ -57,12 +57,12 @@ export function PlatformVideo({ scene, eager = false, className }: PlatformVideo
   }, []);
 
   if (!motionChecked) {
-    return <VideoPlaceholder scene={scene} aspect={aspect} className={className} />;
+    return null;
   }
 
   if (reducedMotion) {
     if (screenshotFailed) {
-      return <VideoPlaceholder scene={scene} aspect={aspect} className={className} />;
+      return null;
     }
 
     return (
@@ -84,7 +84,7 @@ export function PlatformVideo({ scene, eager = false, className }: PlatformVideo
   }
 
   if (videoFailed) {
-    return <VideoPlaceholder scene={scene} aspect={aspect} className={className} />;
+    return null;
   }
 
   return (
