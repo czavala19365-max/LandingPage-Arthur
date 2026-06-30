@@ -888,15 +888,14 @@ ul { list-style: none; }
     transform: none !important;
   }
 
+  .platform-flip__face--front {
+    display: none;
+  }
+
   .platform-flip__face--back {
     position: relative;
     transform: none;
-    margin-top: 16px;
     opacity: 1;
-  }
-
-  .platform-flip__face--front .platform__heading {
-    margin-bottom: 0;
   }
 }
 
